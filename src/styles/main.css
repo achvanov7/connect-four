@@ -1,0 +1,251 @@
+/* Подключение шрифтов Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Базовые стили */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* Center all main container types */
+.home-container,
+.login-container,
+.game-container,
+.result-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center;
+}
+
+.status-message,
+.waiting-room,
+.game-info {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.room-code {
+    padding: 10px;
+    background: #f0f0f0;
+    border-radius: 4px;
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.players-info {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.player {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.player.active {
+    background-color: #f0f0f0;
+}
+
+.player-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.player-color.red {
+    background-color: #ff4444;
+}
+
+.player-color.yellow {
+    background-color: #ffeb3b;
+}
+
+/* Add styles for the home page */
+.home-container h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.start-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+    background-color: #0056b3;
+}
+
+/* Add responsive styles */
+@media (max-width: 768px) {
+    .game-container {
+        padding: 10px;
+    }
+
+    .players-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .player {
+        font-size: 0.9em;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-container {
+        padding: 5px;
+    }
+
+    .room-code {
+        font-size: 1em;
+        padding: 8px;
+    }
+
+    .player {
+        font-size: 0.8em;
+        padding: 8px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+}
+
+/* Add these styles for the logo */
+.home-logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 30px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Add responsive styles for the logo */
+@media (max-width: 768px) {
+    .home-logo {
+        width: 150px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-logo {
+        width: 120px;
+        margin-bottom: 15px;
+    }
+}
+
+.game-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.game-icon {
+    width: 40px;
+    height: 40px;
+}
+
+@media (max-width: 768px) {
+    .game-icon {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Add styles for login page */
+.login-container form {
+    width: 100%;
+    max-width: 300px;
+}
+
+.login-container form button,
+.switch-button {
+    padding: 12px 24px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 300px;
+}
+
+.login-container form button {
+    background-color: #007bff;
+    color: white;
+}
+
+.switch-button {
+    background-color: #6c757d;
+    color: white;
+}
+
+.login-container form button:hover,
+.switch-button:hover {
+    transform: translateY(-2px);
+}
+
+.login-container form button:hover {
+    background-color: #0056b3;
+}
+
+.switch-button:hover {
+    background-color: #5a6268;
+}
+
+/* Add styles for login form inputs */
+.login-container form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1em;
+}
